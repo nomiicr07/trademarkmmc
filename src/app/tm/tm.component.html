@@ -1,0 +1,77 @@
+<div *ngIf="isLoaded" id="content" #content>
+
+    <div>
+         <p style="float:right;">Fees. 2000/=</p>
+         <br>
+      <h4 style="text-align:center;"> TM-1</h4>
+      <hr>
+      <p style="margin-left:10px; font-size:25px;">  Application for registration of trade mark for goods or services and to register a domain name under section 22(1), section84(2); rule 12</p>
+         <div class="container" style="width:100px; height:100px; background: orange; border-radius:2px solid green; margin-left:50px;">
+          
+
+1
+         </div>
+         <hr>
+         <p style="font-size:20px; margin-left:10px;">Application is hereby made for registration in the register of the accompanying trade mark in class 
+              <u><b>{{data.trademarkCategory.Id}}</b></u> in respect <u><b>{{data.trademarkCategory.Trademark}} being goods included in class-{{data.trademarkCategory.Id}}</b></u> <br>
+              in the name(s) of <u><b>M/S {{data.user.Name}}</b></u> Nationality <u><b>Pakistani</b></u><br>
+              Trading as <u><b>Orange Protection (Pvt) Ltd.</b></u>
+              Whose trade or Business address is <u><b>77-D/1, 1st Floor Lahore center Main Boulevard Gulberg Lahore,Pakistan,</b></u>
+              Who claim(s) to be the proprietor(s) thereof and by who they said mark is proposed to be used / <s>being used since</s>  <u><b>  Proposed to be used</b></u>
+              in respect of said goods or services <u><b>Goods</b></u>
+              if the appliction is for a series of marks , indicate how many marks in the series <u><b> N.A</b></u>
+              if the applictoin is for domain name indicate whether it is in respect of goods or services <u><b>N.A</b></u> 
+              if colour is claimed , indicate here and state the colour(s) <u><b>N.A</b></u> 
+              Address for service in Pakistan to which all correspondance should be sent <u><b style="font-size:30px;">{{data.lawyer.CompanyName}}</b></u><span></span>
+              <u><b>{{data.lawyer.CompanyAddress}}</b></u><br>
+              <br>
+              Dated this <u>14th Day of April 2017<b></b></u>
+              
+              <span style="float:right"><u><b>ORANGE PROTECTION (PVT) LTD</b></u><br>
+                  <p> Through authorized agend</p>
+              </span>
+               <br>
+               <br>
+               <br>
+               <span style="float:right"> Signature: <u><B>___________________</B></u></span>
+
+
+
+               <br>
+               <br><br>
+               <span style="float:right;">
+                 <u><b>{{ data.lawyer.Name }} ({{ data.lawyer.Designation }})<br>
+                    {{data.lawyer.CompanyName}}
+                </b></u> <br>
+                {{data.lawyer.CompanyAddress}}
+                <br>
+                <u><b>{{data.lawyer.email}}</b></u>
+              </span>
+              
+
+
+              To, <br>
+              The Registrar of Trade Marks, <br>
+              Trade Marks Registry <br>
+              <b>Karachi.</b>
+
+
+
+            
+            
+      </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<button class="btn btn-primary" (click) = captureScreen()>PDF</button>

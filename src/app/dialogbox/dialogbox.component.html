@@ -1,0 +1,51 @@
+ 
+
+
+<!-- <div class="container">
+
+    <div class="svg1">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+          <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+          <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+        </svg>     </div>
+     <div class="content">
+  <h5>You are Ready to go</h5>
+  <button mat-stroked-button color="primary" style="width:200px; text-align:center;">Click me</button>
+</div>
+</div> -->
+
+
+<div *ngIf = "data.screen == 'step2'">
+  <!-- <button *ngIf="login" class="pull-right" [mat-dialog-close]= 'true'><mat-icon>close </mat-icon></button> -->
+<h1  mat-dialog-title style="margin-bottom:100px; margin-left:30px; margin-right:30px;" class="mat-typography">
+  <svg  version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+  <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+  <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+</svg>
+</h1>
+<div mat-dialog-content style="text-align:center;">
+  <h6  >You Are Ready To Go !</h6>
+  <p  style="font-family:Arial, Helvetica, sans-serif; font-size: 12px;">There are potential conflicts which may affect <br> your trademark,  so it is worthwhile taking our professional <br> advice to ensure its availability. <br> Please call us on 0800 011 3229 and/or purchase <br> the Expert Trademark Review below.<br> This will comprise of a more thorough and accurate<br> search which our experts will undertake on your behalf.</p>
+
+</div>
+<div mat-dialog-actions style="margin-left:50px;" >
+  <button  mat-stroked-button color="primary" style="width:160px; left:22px; text-align:center;" [mat-dialog-close]="true">Click me</button>
+
+</div>
+</div>
+
+
+<div *ngIf="data.screen2 =='admin'" class="text-center">
+  <div class="text-center"  id="DIV_1">
+    <span id="SPAN_2"></span><span id="SPAN_3"></span>
+       
+  </div>
+  <div class="container">
+
+    <h1  class="text-center">Whoops</h1>
+    <p class="text-center">Please select at least one Trademark Class.  Tick the box(es) to <br> indicate between 1-8 Classes which relate to your products or <br> services. Don't worry, we'll contact you and ensure your <br> Trademark is correctly classified before we finalise your <br> application.</p>
+        <button mat-button [mat-dialog-close]="true"> ok </button>
+   
+
+  </div>
+      </div>

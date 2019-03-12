@@ -1,0 +1,44 @@
+
+
+
+
+<div class="div1">
+  <nz-table #nzTable [nzData]="displayData"  >
+    <thead>
+      <tr>
+        <th>Trademark ID</th>
+        <th nzCustomFilter>
+          Classes
+          <nz-dropdown nzTrigger="click" [nzClickHide]="false" #dropdown>
+            <i nz-icon type="smile-o" class="ant-table-filter-icon" [class.ant-table-filter-open]="dropdown.nzVisible" nz-dropdown></i>
+            <div class="custom-filter-dropdown">
+              <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue">
+              <button nz-button [nzType]="'primary'" (click)="search()">Search</button>
+            </div>
+          </nz-dropdown>
+        </th>
+        <th>Company</th>
+        <th>Name</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>
+
+
+
+
+
+
+
+
+

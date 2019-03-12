@@ -1,0 +1,408 @@
+<!-- <mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button type="button" mat-button (click)="drawer.toggle()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #drawer mode="side" opened role="navigation">
+    <mat-nav-list>
+      <a mat-list-item routerLink='/step1'>First Component</a>
+      <a mat-list-item routerLink='/second'>Second Component</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<!-- <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div> -->
+
+<!-- <mat-toolbar style="background:rgb(255, 255, 255);">
+    <mat-toolbar-row>
+      <button type="button" style="background:lightgreen;  height:60px !important; width:60px !important;
+      font-size:60px !important;" aria-label="Toggle sidenav" mat-icon-button >
+         <h4 style="color: white;">LOGO</h4>
+      </button>
+     
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container class="example-container ">
+    <mat-sidenav  mode="side" style="background: rgb(52, 65, 83);" opened role="navigation">
+      <mat-nav-list >
+        <a mat-list-item [routerLink]  ="['/admin', {outlets: {'admin': ['lawyer']}}]"  >
+          <mat-icon style="color:white;" >home</mat-icon></a>
+        <a mat-list-item routerLink='/lawyer'><mat-icon style="color:white;">phone</mat-icon></a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet name="admin"></router-outlet>
+      </mat-sidenav-content>
+  </mat-sidenav-container>  -->
+
+
+<!-- <mat-drawer-container class="example-container" >
+    <mat-drawer mode="side" opened class="drawer" style="width:60px;">
+
+      <li class="logo">Logo</li> -->
+<!--     
+       <li class="list"  [routerLink]  ="['/admin', {outlets: {'admin': ['order']}}]"> <mat-icon  style="color: rgb(136, 152, 173);">home</mat-icon></li>
+           <li class="list"  [routerLink]  ="['/admin', {outlets: {'admin': ['lawyer']}}]"> <mat-icon  style="color: rgb(136, 152, 173);">home</mat-icon></li>
+           <li class="list"  [routerLink]  ="['/admin', {outlets: {'admin': ['setting']}}]"> <mat-icon  style="color: rgb(136, 152, 173);">home</mat-icon></li>
+
+    </mat-drawer>
+    <mat-drawer-content>
+
+      <mat-toolbar  style=" height:50px; background: rgb(255, 255, 255); " class="ml-auto">
+                  -->
+<!-- <ul style="margin-top:20px">
+                  <li style="list-style:none; display:inline; margin-left:900px;" >
+                    <mat-icon>phone</mat-icon>
+                  
+                    
+
+                  </li>
+                    
+                 
+                </ul> -->
+<!-- <div class="dropdown"style="list-style:none; display:inline; " >
+                        <mat-icon  class=" dropdown-toggle ml-auto"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">home</mat-icon>
+
+                  
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">logout</a>
+                   
+                  </div>
+                </div>
+      </mat-toolbar>
+
+                 <router-outlet name="admin"></router-outlet>
+    </mat-drawer-content>
+
+  </mat-drawer-container>
+
+  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- new -->
+<!-- 
+
+  
+
+<div class="vn">
+
+  <li class="logo">Logo</li>
+  <div class="lists">
+  <li class="list"  [routerLink]  ="['/userdashboard', {outlets: {'userdashboard': ['order']}}]">  <mat-icon  style="color: rgb(136, 152, 173);">home</mat-icon></li>
+      <li class="list" [routerLink]  ="['/userdashboard', {outlets: {'userdashboard': ['lawyer']}}]"> <mat-icon  style="color: rgb(136, 152, 173);">chat</mat-icon></li>
+      <li class="list" [routerLink]  ="['/userdashboard', {outlets: {'userdashboard': ['setting']}}]"> <mat-icon  style="color: rgb(136, 152, 173);">phone</mat-icon></li>
+</div>
+
+
+
+
+</div>
+
+<nav class="navbar navbar-expand-sm bg-light ml-5"> -->
+
+<!-- Links -->
+<!-- <ul class="nav navbar-nav ml-auto p-2 ">
+      <li style="margin-right:23px;">
+          <mat-icon style="font-size:27px;">phone</mat-icon>
+        </li>
+    <li class="nav-item " style="border-left:1px solid black ; padding-left:20px;">
+      
+          <i class="material-icons"  [matMenuTriggerFor]="menu" >account_circle   </i>
+          
+          <mat-menu #menu="matMenu"> -->
+<!-- <i class="material-icons"> account_circle</i>  -->
+
+<!-- <a mat-menu-item>log Out</a>
+            
+          </mat-menu>
+        </li>
+     
+   
+  </ul>
+
+</nav>
+
+
+<div class="content ml-5">
+   
+  <router-outlet name="userdashboard"></router-outlet>
+
+
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div style="position: relative;">
+      <div id="barChart_div" class="bg-light" style="width: 40px; position:absolute; height: 100vh; float:left;  justify-content: center; ">1</div>
+
+  <nav class="navbar navbar-light bg-light  left: 59px;" style=" border-right: 1px solid silver;  position: relative; overflow: hidden; width: 100%;">
+      <a class="navbar-brand" href="#">Navbar</a>
+    </nav>
+ 
+    
+    </div>
+     -->
+
+
+
+
+
+
+
+<!-- dashboard new  -->
+
+
+
+
+
+
+
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
+    <div class="logo">
+    </div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu>
+        <span title><i nz-icon type="user"></i><span class="nav-text"
+            [routerLink]="['userdashboard']">Dashboard</span></span>
+
+
+
+      </li>
+      <li nz-submenu>
+        <span title><i nz-icon type="user"></i><span [routerLink]="['usertrademark']"
+            class="nav-text">TradeMark</span></span>
+
+      </li>
+
+      <li nz-submenu>
+        <span title><i nz-icon type="user"></i><span class="nav-text" [routerLink]="['inquiry']">Inquiry</span></span>
+
+      </li>
+
+      <li nz-submenu>
+        <span title><i nz-icon type="user"></i><span class="nav-text" [routerLink]="['order']">Orders</span></span>
+
+      </li>
+
+      <li nz-submenu>
+        <span title><i nz-icon type="user"></i><span class="nav-text"
+            [routerLink]="['userreports']">Reports</span></span>
+
+      </li>
+
+
+      <li nz-submenu>
+        <span title><i nz-icon type="user"></i><span class="nav-text">Billing</span></span>
+
+      </li>
+
+
+
+
+
+
+
+      <!-- <li nz-submenu>
+            <span title><i nz-icon type="team"></i><span class="nav-text">Comapany</span></span>
+           
+          </li> -->
+
+
+      <li nz-submenu>
+        <span title><i nz-icon type="team"></i><span class="nav-text">Company</span> </span>
+        <ul>
+          <li nz-menu-item [(ngModel)]="clik" [routerLink]="['addcomapany']">Company</li>
+          <li nz-menu-item [routerLink]="['userteam']">Team</li>
+          <li nz-menu-item [routerLink]="['userroles']">Roles</li>
+
+        </ul>
+
+      <li nz-menu-item><span><i nz-icon type="file"></i><span class="nav-text"
+            [routerLink]="['userdocuments']">Documents</span></span>
+
+
+
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header style="background: #fff; padding:0;">
+      <!-- <i class="trigger" nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'" (click)="isCollapsed=!isCollapsed"></i>
+         
+
+
+
+          <i nz-icon type="question-circle" theme="outline" style="float: right; font-size: 20px;
+          line-height: 64px;  margin-right: 20px;  padding-left:10px; color:lightblue;"></i>
+
+
+<i nz-icon type="setting" theme="outline" style="float: right; font-size: 20px;
+          line-height: 64px;  margin-right: 20px;  padding-left:10px; color:#acacac;"
+           [routerLink]  ="['/lawyerdashboard', {outlets: {'lawyerdashboard': ['setting']}}]"></i>
+
+
+
+
+
+<i nz-icon type="bell" theme="outline" style="float: right; font-size: 20px;
+          line-height: 64px;  margin-right: 20px; padding-left:10px; color:lightsalmon;"></i>
+
+
+<nz-dropdown [nzTrigger]="'click'" style="float: right; font-size: 20px;
+line-height: 64px;  margin-right: 14px; padding-left:5px; color:lightgray;">
+ <a nz-dropdown style="          line-height: 64px;">
+      John Doe   
+ </a>
+ <ul nz-menu>
+   <li nz-menu-item>My Profile</li>
+   <li nz-menu-item>Notifications setting</li>
+   <li nz-menu-item>Log Out</li>
+   
+   </ul>
+</nz-dropdown>   
+ -->
+
+
+
+
+
+      <i class="trigger" nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'" (click)="isCollapsed=!isCollapsed"></i>
+
+
+
+
+
+
+
+      <i nz-icon type="question-circle" theme="outline" style="float: right; font-size: 20px;
+ line-height: 64px;  margin-right: 20px;  padding-left:10px; color:black;"></i>
+      <div class="dropdown chip" style="float: right; font-size: 20px;
+ line-height: 64px;  margin-right: 20px;  padding-left:10px; ">
+
+
+
+        <button type="button" class="btn btn-outline-light text-dark dropdown-toggle" data-toggle="dropdown">
+          <i class="fa fa-user"></i> Admin
+        </button>
+
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Account Setting</a>
+          <a class="dropdown-item" [routerLink]="['userprofile']">My
+            Profile</a>
+          <a class="dropdown-item" href="#">Sign Out</a>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+      <i nz-icon type="setting" theme="outline" style="float: right; font-size: 20px;
+ line-height: 64px;  margin-right: 20px;  padding-left:10px; color:black;"></i>
+
+
+
+
+
+      <i nz-icon type="bell" theme="outline" style="float: right; font-size: 20px;
+ line-height: 64px;  margin-right: 20px; padding-left:10px; color:black;"></i>
+
+
+
+    </nz-header>
+    <nz-content style="margin:0 16px;">
+
+      <button id="btn" class="pull-right" style=" position: relative;" *ngIf="active" nz-button nzType="dashed"
+        [routerLink]="['UserAddnew']"><i nz-icon type="plus"></i>Add
+        New</button>
+      <button id="btn" class="pull-right" style=" margin-top:10px; margin-bottom: 5px; " nz-button nzType="dashed"
+        [routerLink]="['checkoutuser']"><i nz-icon type="plus"></i>Add
+        New</button>
+
+      <div style=" background: #fff; min-height: 564px;">
+        <div style=" min-height: 42px; background:#f0f2f5;"></div>
+        <router-outlet></router-outlet>
+        <!-- <app-user-inquiry></app-user-inquiry> -->
+
+      </div>
+
+    </nz-content>
+    <nz-footer style="text-align: center;">MMC GLOBAL
+
+
+      <p class="pull-right">Terms & Conditions </p>
+      <p class="pull-left"> Username userRole userIP <br> Date and time</p>
+
+    </nz-footer>
+
+
+  </nz-layout>
+</nz-layout>
+<ng-template #trigger>
+  <i nz-icon type="up"></i>
+</ng-template>
+<!-- side navbar -->
+<!-- <nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" nzTitle="Basic Drawer" (nzOnClose)="close()">
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+    </nz-drawer> -->

@@ -1,0 +1,60 @@
+
+
+<div class="container">
+   
+ 
+  <div class="row">
+    <div class="col-lg-4">    <a href="#demo" class="btn btn-primary" data-toggle="collapse"> step 1</a>
+    </div>
+    <div class="col-lg-4">    <a href="#demo2" class="btn btn-primary" data-toggle="collapse">step 2</a>
+    </div>
+    <div class="col-lg-4">    <a href="#demo3" class="btn btn-primary" data-toggle="collapse">step 3</a>
+    </div>
+  </div>
+    
+
+  
+  
+  
+    <div id="demo" class="collapse">
+     
+      <div class=" " style="text-align:center; margin-top:10px; color:grey"> <h3> Step 1 </h3></div>
+              
+      <div class="container">
+        
+         <mat-form-field> <input matInput type="text" placeholder="Company Name" name="uname"  [(ngModel)]="username" required></mat-form-field>
+         <mat-form-field style="margin-left:20px;"> <input type="text" placeholder="Last Name" name="uname" required  [(ngModel)]="lastname" matInput></mat-form-field> <br>
+ 
+         <mat-form-field style="width:372px;" > <input type="text" placeholder="Phone Number" name="uname" required [(ngModel)]="telno" matInput ></mat-form-field><br>
+ 
+          <mat-form-field style="width:372px;"> <input type="text" placeholder="Email Address " name="uname" required [(ngModel)]="email" matInput ></mat-form-field><br>
+ 
+          <mat-form-field style="width:372px;"> <input type="text" placeholder="Password " name="uname" required [(ngModel)]="password" matInput ></mat-form-field><br>
+         
+ 
+      
+              
+          <button type="button" style="margin-left:100px;" class="loginbtn" (click)="reg()">Register</button>
+ 
+
+
+    </div>
+
+
+    </div>
+    <div id="demo2" class="collapse">
+      <h3>step2</h3>
+      <mat-form-field style="width:100%;"> <input type="text" placeholder="Enter Username"  [(ngModel)]="loginemail" required matInput> </mat-form-field>
+
+    </div>
+    <div id="demo3" class="collapse">
+      <h3>step3</h3>
+      <mat-form-field style="width:100%;"> <input type="text" placeholder="Enter Username"  [(ngModel)]="loginemail" required matInput> </mat-form-field>
+
+    </div>
+  
+
+
+
+
+</div>

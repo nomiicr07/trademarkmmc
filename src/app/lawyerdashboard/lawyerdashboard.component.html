@@ -1,0 +1,170 @@
+
+     <nz-layout>
+      <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
+        <div class="logo">
+        </div>
+        <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+          <li nz-submenu>
+            <span title><i nz-icon type="user"></i><span class="nav-text">Dashboard</span></span>
+            
+          </li>
+          <li nz-submenu>
+            <span title><i nz-icon type="user"></i><span class="nav-text">Trade Mark</span></span>
+           
+          </li>
+
+          <li nz-submenu>
+            <span title><i nz-icon type="user"></i><span class="nav-text">Disputes</span></span>
+           
+          </li>
+
+          <li nz-submenu>
+            <span title><i nz-icon type="user"></i><span class="nav-text">Search</span></span>
+           
+          </li>
+
+          <li nz-submenu>
+            <span title><i nz-icon type="user"></i><span class="nav-text">Deadlines</span></span>
+           
+          </li>
+
+
+         
+
+         
+          <li nz-menu-item><span><i nz-icon type="file"></i><span class="nav-text">Documents</span></span></li>
+        </ul>
+      </nz-sider>
+      <nz-layout>
+        <nz-header style="background: #fff; padding:0;">
+          <!-- <i class="trigger" nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'" (click)="isCollapsed=!isCollapsed"></i> -->
+          <!-- <i nz-icon [type]="'User'" [theme]="'fill'" style="float: right; font-size: 22px;
+          line-height: 64px;
+          padding: 0 24px;"></i> -->
+          <!-- <i nz-icon type="user" theme="outline" style="float: right; font-size: 20px;
+          line-height: 64px; left:10px; margin-right: 14px;"></i> -->
+
+        
+
+           <!-- <i nz-icon type="question-circle" theme="outline" style="float: right; font-size: 20px;
+           line-height: 64px;  margin-right: 20px;  padding-left:10px; color:lightblue;"></i>
+
+
+<i nz-icon type="setting" theme="outline" style="float: right; font-size: 20px;
+           line-height: 64px;  margin-right: 20px;  padding-left:10px; color:#acacac;"
+            [routerLink]  ="['/lawyerdashboard', {outlets: {'lawyerdashboard': ['setting']}}]"></i>
+
+
+
+
+
+ <i nz-icon type="bell" theme="outline" style="float: right; font-size: 20px;
+           line-height: 64px;  margin-right: 20px; padding-left:10px; color:lightsalmon;"></i>
+
+
+<nz-dropdown [nzTrigger]="'click'" style="float: right; font-size: 20px;
+line-height: 64px;  margin-right: 14px; padding-left:5px; color:lightgray;">
+  <a nz-dropdown style="          line-height: 64px;">
+       John Doe   
+  </a>
+  <ul nz-menu>
+    <li nz-menu-item>My Profile</li>
+    <li nz-menu-item>Notifications setting</li>
+    <li nz-menu-item>Log Out</li>
+    
+    </ul>
+ </nz-dropdown>   
+
+
+
+ -->
+
+
+
+
+ <i class="trigger" nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'" (click)="isCollapsed=!isCollapsed"></i>
+    
+
+
+
+     
+
+
+ <i nz-icon type="question-circle" theme="outline" style="float: right; font-size: 20px;
+ line-height: 64px;  margin-right: 20px;  padding-left:10px; color:black;"></i>
+ <div class="dropdown chip" style="float: right; font-size: 20px;
+ line-height: 64px;  margin-right: 20px;  padding-left:10px; ">
+  
+ 
+     
+     <button type="button" class="btn btn-outline-light text-dark dropdown-toggle" data-toggle="dropdown">
+         <i class="fa fa-user"></i>  Admin
+     </button>
+ 
+    <div class="dropdown-menu">
+     <a class="dropdown-item" href="#">Account Setting</a>
+     <a class="dropdown-item" [routerLink]  ="['/lawyerdashboard', {outlets: {'lawyerdashboard': ['setting']}}]">My Profile</a>
+     <a class="dropdown-item" href="#">Sign Out</a>
+   </div>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <i nz-icon type="setting" theme="outline" style="float: right; font-size: 20px;
+ line-height: 64px;  margin-right: 20px;  padding-left:10px; color:black;"
+  ></i>
+ 
+ 
+ 
+ 
+ 
+ <i nz-icon type="bell" theme="outline" style="float: right; font-size: 20px;
+ line-height: 64px;  margin-right: 20px; padding-left:10px; color:black;"></i>
+
+
+
+
+  
+        </nz-header>
+        <nz-content style="margin:0 16px;">
+          <!-- <nz-breadcrumb style="margin:16px 0;">
+            <nz-breadcrumb-item>User</nz-breadcrumb-item>
+            <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
+          </nz-breadcrumb>
+          <div style="padding:24px; background: #fff; min-height: 546px;">
+          
+            <router-outlet name="lawyerdashboard"></router-outlet>
+          </div> -->
+
+
+
+
+            
+          <button id="btn" class="pull-right" style=" margin-top:10px; margin-bottom: 5px; "   nz-button nzType="dashed"  ><i nz-icon type="plus"></i>Add New</button> 
+
+          <div style=" background: #fff; min-height: 564px;">
+            <div style=" min-height: 42px; background:#f0f2f5;"></div>
+            <router-outlet  name="lawyerdashboard"></router-outlet>
+
+          </div>
+        </nz-content>
+        <nz-footer style="text-align: center;"> &copy; 2019 MMC GLOBAL. All Right Reserved
+        
+             <p class="pull-right">Terms & Conditions </p>
+             <p class="pull-left" > Username userRole userIP <br> Date and time</p>
+        
+        
+        </nz-footer>
+       
+      </nz-layout>
+    </nz-layout>
+    <ng-template #trigger>
+      <i nz-icon type="up"></i>
+    </ng-template>
+

@@ -1,0 +1,250 @@
+
+ <div class="container mt-5 pl-3" style="width:60%;">
+<nz-select style="width: 200px;" nzShowSearch nzAllowClear nzPlaceHolder="Company Types" [(ngModel)]="selectedValue" (ngModelChange)="log($event)">
+  <nz-option nzLabel="Individual" nzValue="Individual"></nz-option>
+  <nz-option nzLabel="Corporation" nzValue="Corporation"></nz-option>
+  <nz-option nzLabel="Limited Liability Company (LLC)" nzValue="Limited"></nz-option>
+  <nz-option nzLabel="Partnership" nzValue="Partnership"></nz-option>
+  <nz-option nzLabel="-------Other Types:-------" nzValue="" [nzDisabled]="disabled"></nz-option>
+  <nz-option nzLabel="Sole Proprietorship" nzValue="Proprietorship"></nz-option>
+  <nz-option nzLabel="Multiple Individuals" nzValue="Multiple"></nz-option>
+  
+  <nz-option nzLabel="Unincorporated Association" nzValue="Unincorporated"></nz-option>
+  <nz-option nzLabel="Charitable Corporation" nzValue="Charitable"></nz-option>
+  <nz-option nzLabel="Charitable Non-Profit Corporation" nzValue=""></nz-option>
+  <nz-option nzLabel="Foundation" nzValue=""></nz-option>
+  <nz-option nzLabel="Non-Profit Corporation" nzValue=""></nz-option>
+  <nz-option nzLabel="Other Business Type" nzValue=""></nz-option>
+</nz-select>
+
+
+
+<!-- indivual -->
+<div class="container mt-4 " *ngIf="indivual">
+  <h4>indivual</h4>
+  <!-- <label for=""> Applicant Information::</label>
+  <input nz-input > -->
+
+  <h6>Applicant Information:</h6>
+  <!-- <label for="">Applicant Name: :</label>
+
+  <input nz-input > -->
+  <label for="">Citizen of Country: :</label>
+
+  <input nz-input  >
+  <label for="">Address: :</label>
+
+  <input nz-input  >
+  <label for="">Country/City/State :</label>
+
+  <input nz-input  >
+  <!-- <label for="">State: :</label>
+
+  <input nz-input  >
+  <label for="">Other State/Providence :</label>
+
+  <input nz-input  >
+  <label for="">Zip/Postal Code: :</label>
+
+  <input nz-input  >
+  <label for="">Country: :</label> -->
+  <button class="btn btn-primary mt-4 pull-right" [routerLink]= "['/payment']"> Submit </button>
+
+
+ 
+
+</div>
+
+
+<!-- Corporation -->
+<div class="container   mt-5"  *ngIf="Corporation">
+      <h3>Corporation</h3>
+
+
+
+      <h5>Applicant Information:</h5>
+
+
+  <label for="">Business Name :</label>
+
+  <input nz-input  >
+  
+  <label for="">State/Country Incorporated: :</label>
+
+  <input nz-input  >
+  <label for="">Address :</label>
+
+  <input nz-input  >
+  
+  <button class="btn btn-primary mt-4 pull-right" [routerLink]= "['/payment']"> Submit </button>
+
+</div>
+
+
+<!-- Limited Liability Company (LLC) -->
+<div class="container  mt-5" *ngIf="Limited">
+  <h3> Limited Liability Company (LLC)</h3>
+
+
+  <h5>Applicant Information:</h5>
+  <label for="">Business Name :</label>
+
+  <input nz-input  >
+
+  <label for="">State/Country Incorporated:</label>
+
+  <input nz-input  >
+
+  <label for="">Address</label>
+
+  <input nz-input  >
+  <button class="btn btn-primary mt-4 pull-right" [routerLink]= "['/payment']"> Submit </button>
+
+
+
+</div>
+
+
+
+
+<!-- Partnership -->
+
+
+<div class="container mt-5 " *ngIf="Partnership">
+  <h3> Partnership </h3>
+
+  <h5>Applicant Information:</h5>
+
+  <label for="">Business Name:</label>
+
+  <input nz-input  >
+ 
+
+
+  <label for=""> State/Country Incorporated:</label>
+
+  <input nz-input  >
+
+  <label for=""> Address:</label>
+
+  <input nz-input  >
+ 
+
+  <label for="">  Name and Citizenship of General Partners:
+  </label>
+
+  <input nz-input  >
+
+     <div class='text-center'>
+  <button class="btn btn-primary mt-5 pull-right" [routerLink]= "['/payment']"> Submit </button>
+</div>
+</div>
+
+
+
+
+
+<!-- Sole Proprietorship -->
+<div class="container mt-5" *ngIf="Proprietorship">
+
+ <h3>Sole Proprietorship</h3>
+
+<h5>Applicant Information:</h5>
+ <label for="">Business Name:</label>
+
+ <input nz-input  >
+ 
+ <label for="">State/Country Incorporated:</label>
+
+ <input nz-input  >
+
+
+
+
+
+
+ <label for=""> Business Owner's Name and Citizenship:</label>
+
+ <input nz-input  >
+
+
+
+
+
+
+ <label for=""> Address:</label>
+
+ <input nz-input  >
+
+ <button class="btn btn-primary mt-4 pull-right" [routerLink]= "['/payment']"> Submit </button>
+
+</div>
+
+<br>
+
+<!-- option  -->
+
+
+
+<div class="container mt-5 " >
+
+
+  <nz-select style="width: 200px;" nzShowSearch nzAllowClear nzPlaceHolder="Company Types" [(ngModel)]="selectedValue" (ngModelChange)="check($event)">
+<label for="">Did you begin to use the mark in commerce? (What's this?)</label>
+
+<nz-option nzLabel=" Yes, I am Using the Mark in Commerce Now" nzValue="yes"></nz-option>
+<nz-option nzLabel="No, I Intend to Use the Mark" nzValue="no"></nz-option>
+
+
+  </nz-select>
+
+
+  <div class="container" style= "margin-top:33px;" *ngIf="checking">
+    <label for="">
+      Date when you first used the mark (MM/DD/YYYY): </label> <br>
+      <nz-date-picker [nzFormat]="dateFormat"></nz-date-picker>
+
+ 
+  </div>
+</div>
+
+<br>
+
+<!-- upload log -->
+
+<!-- <div class="container  ">
+
+     <h3>Upload logo </h3>
+
+
+
+     <nz-upload
+     nzAction="https://jsonplaceholder.typicode.com/posts/"
+     [nzFileList]="fileList">
+     <button nz-button>
+       <i nz-icon type="upload"></i><span>Upload</span>
+     </button>
+   </nz-upload>
+
+</div> -->
+
+
+
+<br>
+
+<!-- logo color  -->
+
+
+<!-- <div class="container" >
+  <h4>logo color</h4>
+  <label for="">Do you want to protect the logo for all colors?</label>
+  <label nz-checkbox >Yes - Protect the logo in all colors</label>
+  <label nz-checkbox >No - Protect the logo in specific colors</label>
+
+</div>
+ -->
+
+
+
+
+</div>

@@ -1,0 +1,88 @@
+
+
+
+
+<!-- <div class="div1">
+    <nz-table #nzTable [nzData]="displayData"  >
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th nzCustomFilter>
+            Name
+            <nz-dropdown nzTrigger="click" [nzClickHide]="false" #dropdown>
+              <i nz-icon type="smile-o" class="ant-table-filter-icon" [class.ant-table-filter-open]="dropdown.nzVisible" nz-dropdown></i>
+              <div class="custom-filter-dropdown">
+                <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue">
+                <button nz-button [nzType]="'primary'" (click)="search()">Search</button>
+              </div>
+            </nz-dropdown>
+          </th>
+          <th>Email</th>
+          <th>Company Name</th>
+          <th>Telephone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of list">
+          <td>{{data.Id}}</td>
+          <td>{{data.Name}}</td>
+          <td>{{data.Email}}</td>
+          <td>{{data.CompanyName}}</td>
+          <td>{{data.Telephone}}</td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <nz-table
+#rowSelectionTable
+[nzData]="data"
+(nzCurrentPageDataChange)="currentPageDataChange($event)"
+(nzPageIndexChange)="refreshStatus()"
+(nzPageSizeChange)="refreshStatus()">
+<thead>
+  <tr>
+    <th nzShowCheckbox [(nzChecked)]="allChecked" [nzIndeterminate]="indeterminate" (nzCheckedChange)="checkAll($event)"></th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Company Name</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let data of list">
+    <td nzShowCheckbox [(nzChecked)]="data.checked" [nzDisabled]="data.disabled" (nzCheckedChange)="refreshStatus()"></td>
+    <td>{{data.Name}}</td>
+    <td>{{data.Email}}</td>
+    <td>{{data.CompanyName}}</td>
+  </tr>
+</tbody>
+</nz-table>

@@ -1,0 +1,173 @@
+<div *ngIf="!login">
+<div id="DIV_20">
+    <div id="DIV_1">
+      <div id="DIV_2">
+      
+      
+      
+      </div>
+    
+      <div id="FORM_13">
+           
+          <label for="searchTerm" id="LABEL_14">
+            FREE Trademark<br id="BR_15" /> <span id="SPAN_16">Search</span>
+          </label>
+          <input type="text" [(ngModel)]="searchTerm" id="INPUT_17" tabindex="1" size="32" [(ngModel)]="usersearch" placeholder="Enter trademark here" />
+          <input type="button"  (click)="scroll('r1')" value="Go" id="INPUT_18" />
+        </div>
+        <!-- <div id="container" class="container">
+            <div class="bg-secondary"> <h4 style="color:white;"> Wordmark Only</h4></div>
+            <div class="bg-secondary"> <h4 style="color:white;"> Logo</h4> </div>
+            <div class="bg-secondary"><h4 style="color:white;"> Both</h4></div>
+          </div>
+          <button class="btn btn-primary btn1" (click)="continueBtn()"> Continue </button>
+         
+          
+          <hr style="background:silver; width: 80 ">
+        
+        </div> -->
+      
+  
+        <div class="row r1" >
+          <div class="col-lg-6"> 
+            <div class="panel">
+           <div class="panel-heading bg-primary rounded"> <h3 style="color:white">lists</h3></div>	 
+             <div class="panel-body rounded">
+                <div class="ps" style="position: relative; max-width: 650px; max-height: 300px;" [perfectScrollbar]="config">
+                    <div>
+
+                      <!-- <ul class="list-group" style="text-align:left"> -->
+               <mat-list class="" style="text-align:left" role="listbox" dense >
+                  <!-- <li class="list-group-item" *ngFor='let trade of list'> -->
+                    <mat-list-item  class="" *ngFor='let trade of list'>
+                    <!-- <input type="checkbox" (change)="onCheckboxChange(trade,$event)">  -->
+                     <mat-checkbox (change)="onCheckboxChange(trade,$event.checked)" color="primary"></mat-checkbox>
+                         <span style="margin-left: 17px; padding-bottom: 6px;">   {{trade.Id}} . {{trade.Trademark}} </span>
+                   </mat-list-item>
+                  <!-- </li> -->
+                  </mat-list>
+                <!-- </ul> -->
+
+
+
+
+                    </div>
+                  </div>
+            
+           </div>
+         
+         </div>
+ 
+         </div>
+          <div class="col-lg-6" >
+             <div class="panel" >
+                 <div class="panel-heading bg-primary rounded"> <h3 style="color:white">lists</h3></div>	 
+                   <div class="panel-body rounded " >
+                     <!-- <ul class="list-group" style="text-align:left">
+                        <li class="list-group-item" *ngFor='let trade of lists'>
+                          
+                             {{trade.Id}}. {{trade.Trademark}}
+                         </li>
+                     
+                     </ul> -->
+                     <perfect-scrollbar style="max-width: 650px; max-height: 300px;" [config]="config">
+                        <div>
+
+                                              <!-- <ul class="list-group" style="text-align:left"> -->
+               <mat-list  style="text-align:left" >
+                  <!-- <li class="list-group-item" *ngFor='let trade of list'> -->
+                    <mat-list-item   *ngFor='let trade of lists'>
+                    <!-- <input type="checkbox" (change)="onCheckboxChange(trade,$event)">  -->
+                     <!-- <mat-checkbox (change)="onCheckboxChange(trade,$event)" color="primary"></mat-checkbox> -->
+                    {{trade.Id}} . {{trade.Trademark}} 
+                   </mat-list-item>
+                  <!-- </li> -->
+                  </mat-list>
+
+
+
+
+                        </div>
+                      </perfect-scrollbar>
+                     
+
+
+                   </div>
+                 
+                 </div>
+                 </div>
+ 
+                 
+ 
+ 
+        </div>
+        <button class="btn btn-primary"  (click)="openDialog()"> Continue </button>
+ 
+
+  
+
+ 
+
+  </div>
+</div>
+</div>
+<div *ngIf="login" class= "divreg" style="max-width: 100%; margin: 0 auto;"  >
+<div class="container">
+    <div class="row mt-5 pl-4 ">
+     <div class="col-lg-5 shadow p-3 mb-5 bg-white rounded  " style="margin-right:10px;">
+     <div class=" " style="text-align:center; margin-top:10px; color:grey"> <h3> Registration </h3></div>
+              
+     <div class="container ">
+       
+        <mat-form-field> <input matInput type="text" placeholder="First Name" name="uname"  [(ngModel)]="username" required></mat-form-field>
+        <mat-form-field style="margin-left:20px;"> <input type="text" placeholder="Last Name" name="uname" required  [(ngModel)]="lastname" matInput></mat-form-field> <br>
+
+        <mat-form-field style="width:100%;"><input type="text" placeholder="Phone Number" name="uname" required [(ngModel)]="telno" matInput ></mat-form-field><br>
+
+         <mat-form-field style="width:100%;"> <input type="text" placeholder="Email Address " name="uname" required [(ngModel)]="email" matInput ></mat-form-field><br>
+
+         <mat-form-field style="width:100%;"> <input type="text" placeholder="Password " name="uname" required [(ngModel)]="password" matInput ></mat-form-field><br>
+        
+
+     
+             
+         <button type="button" style="margin-left:100px;" class="loginbtn" (click)="reg()">Register</button>
+           <br>
+         <label>
+           
+           
+         </label>
+       </div>
+     </div>
+      <div class="col-lg-5 c2  shadow p-3 mb-5 bg-white rounded" style="margin-left:50px;">
+        <div class="" style="text-align:center; padding-top:10px; color: gray"> <h3>Login</h3> </div>
+        <div class="container text-center">
+           <mat-form-field style="width:100%;"> <input type="text" placeholder="Enter Username"  [(ngModel)]="loginemail" required matInput> </mat-form-field>
+       <br>
+           <mat-form-field style="width:100%;"> <input type="password" placeholder="Enter Password"  required [(ngModel)]="lpassword" matInput></mat-form-field> 
+               <br>
+           <button type="button" class="loginbtn" style="margin-left:70px;" (click)="loginUser()">Login</button>
+             <br>
+           <label>
+             
+             
+           </label>
+         </div>
+       
+        </div>
+
+ 
+      
+
+
+      </div>     
+
+    </div>
+
+
+
+
+
+
+
+</div>

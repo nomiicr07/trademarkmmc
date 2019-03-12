@@ -1,0 +1,128 @@
+<div id="DIV_20">
+    <div id="DIV_1">
+      <div id="DIV_2">
+      
+      
+      
+      </div>
+    
+      <form  method="get" id="FORM_13">
+           
+          <label for="searchTerm" id="LABEL_14">
+            FREE Trademark<br id="BR_15" /> <span id="SPAN_16">Search</span>
+          </label>
+          <input type="text" name="searchTerm" id="INPUT_17" tabindex="1" size="32" placeholder="Enter trademark here" />
+          <input type="submit" name="submit" value="Go" id="INPUT_18" />
+        </form>
+               <div class="row">
+           <div class="col-lg-6"> 
+             <div class="panel">
+            <div class="panel-heading bg-secondary"> <h3 style="color:white">lists</h3></div>	 
+              <div class="panel-body">
+              <ul class="list-group" style="text-align:left">
+                <li class="list-group-item" *ngFor='let trade of list'>
+                  <input type="checkbox" (change)="onCheckboxChange(trade,$event)"> 
+                  {{trade.Id}} . {{trade.Trademark}}
+                  
+                </li>
+                
+              </ul>
+            </div>
+          
+          </div>
+  
+          </div>
+           <div class="col-lg-6" >
+              <div class="panel" >
+                  <div class="panel-heading bg-secondary"> <h3 style="color:white">lists</h3></div>	 
+                    <div class="panel-body" style="border-radius: 40px;">
+                      <ul class="list-group" style="text-align:left">
+                         <li class="list-group-item" *ngFor='let trade of lists'>
+                           
+                              {{trade.Id}}. {{trade.Trademark}}
+                          </li>
+                      
+                      </ul>
+                    </div>
+                  
+                  </div>
+                  </div>
+  
+                  
+  
+  
+         </div>
+         <button class="btn btn-secondary"> Continue </button>
+  
+  
+      </div>
+  
+      
+  </div>
+  
+  
+  <router-outlet></router-outlet>
+  
+  
+  <!-- classes -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <nz-progress [nzPercent]="30"></nz-progress>
+
+  
+  
+  <nz-progress [nzPercent]="75" nzType="circle" [nzWidth]="80"></nz-progress>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

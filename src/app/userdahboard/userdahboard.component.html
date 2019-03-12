@@ -1,0 +1,189 @@
+<div *ngIf="show">
+
+  <nz-layout>
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
+      <div class="logo">
+      </div>
+      <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+        <li nz-menu-item>
+          <span title><i nz-icon type="dashboard"></i><span class="nav-text"
+              routerLink="http://localhost:4200/userdashboard">Dash board </span></span>
+
+        </li>
+        <li nz-menu-item>
+          <span title><i [routerLink]="['trademarks']" nz-icon
+              type="user"></i><span class="nav-text"
+              [routerLink]="['trademarks']">TradeMark</span></span>
+
+        </li>
+        <li nz-menu-item>
+          <span title><i [routerLink]="['orders']" nz-icon
+              type="user"></i><span class="nav-text"
+              [routerLink]="['orders']">Orders</span></span>
+
+        </li>
+        <li nz-menu-item>
+          <span title><i nz-icon type="user"></i><span class="nav-text">Inquiry</span></span>
+
+        </li>
+
+        <!-- <li nz-menu-item>
+        <span title><i [routerLink]  ="['/admindashboard', {outlets: {'admindashboard': ['intake']}}]" nz-icon type="user" ></i><span class="nav-text"  [routerLink]  ="['/admindashboard', {outlets: {'admindashboard': ['intake']}}]">Intake</span></span>
+       
+      </li> -->
+        <li nz-submenu>
+          <span title><i nz-icon type="user"></i><span class="nav-text">User</span></span>
+
+        </li>
+        <li nz-submenu>
+          <span title><i nz-icon type="team"></i><span class="nav-text"
+              [routerLink]="['invite']">Company <br>
+              Managment</span> </span>
+          <ul>
+            <li (click)="display()" nz-menu-item
+              [routerLink]="['user']">User</li>
+            <li (click)="display()" nz-menu-item
+              [routerLink]="['roles']">Roles</li>
+            <li nz-menu-item>Clients</li>
+          </ul>
+
+
+        <li nz-menu-item><span><i nz-icon type="file"></i><span class="nav-text" [routerLink]="['admindocument']">Documents</span></span></li>
+
+      </ul>
+
+
+    </nz-sider>
+    <nz-layout>
+      <nz-header style="background: #fff; padding:0;">
+        <i class="trigger" nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'"
+          (click)="isCollapsed=!isCollapsed"></i>
+
+
+
+
+
+
+
+        <i nz-icon type="question-circle" theme="outline" style="float: right; font-size: 20px;
+line-height: 64px;  margin-right: 20px;  padding-left:10px; color:black;"></i>
+        <div class="dropdown chip" style="float: right; font-size: 20px;
+line-height: 64px;  margin-right: 20px;  padding-left:10px; ">
+
+
+
+          <button type="button" class="btn btn-outline-light text-dark dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-user"></i> Admin
+          </button>
+
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Account Setting</a>
+            <a class="dropdown-item" [routerLink]="['/admindashboard', {outlets: {'admindashboard': ['myprofile']}}]">My
+              Profile</a>
+            <a class="dropdown-item" href="#">Sign Out</a>
+          </div>
+        </div>
+
+        <!-- admin dropdown end  -->
+
+
+
+
+
+
+
+
+        <i nz-icon type="setting" theme="outline" style="float: right; font-size: 20px;
+line-height: 64px;  margin-right: 20px;  padding-left:10px; color:black;"
+          [routerLink]="['/lawyerdashboard', {outlets: {'lawyerdashboard': ['setting']}}]"></i>
+
+
+
+
+
+        <i nz-icon type="bell" theme="outline" style="float: right; font-size: 20px;
+line-height: 64px;  margin-right: 20px; padding-left:10px; color:black;"></i>
+
+
+
+
+
+
+
+
+      </nz-header>
+      <nz-content style="margin:0 16px;">
+        <!-- <nz-breadcrumb-item>User</nz-breadcrumb-item> -->
+        <!-- <nz-breadcrumb-item>Bill</nz-breadcrumb-item> -->
+
+
+
+
+
+
+
+        <button id="btn" class="pull-right" *ngIf="click" (click)="showdiv()" nz-button nzType="dashed"><i nz-icon
+            type="plus"></i>Add New</button>
+
+        <!-- <div style="padding:0px; background: #fff; min-height: 546px;">
+        
+          <router-outlet  name="admindashboard"></router-outlet>
+
+      </div> -->
+
+        <div style=" background: #fff; min-height: 564px;">
+          <div style=" min-height: 42px; background:#f0f2f5;"></div>
+          <router-outlet></router-outlet>
+        
+
+        </div>
+      </nz-content>
+      <nz-footer style="text-align: center;">MMC GLOBAL
+
+
+        <p class="pull-right">Terms & Conditions </p>
+        <p class="pull-left"> Username userRole userIP <br> Date and time</p>
+
+      </nz-footer>
+
+
+    </nz-layout>
+  </nz-layout>
+  <ng-template #trigger>
+    <i nz-icon type="up"></i>
+  </ng-template>
+
+</div>
+<div *ngIf="add" class="mt-5">
+
+  <div class="container  bg-light pt-5 " style="margin-top:100px; padding-right: 42px; ">
+    <mat-icon class="cross" style="float:right; " (click)="closeAdd()">close</mat-icon> <br>
+
+
+    <h2 class="text-center">Invite Members to <b>MMC-GLOBAL</b></h2>
+    <div #user class=" r1 row justify-content-around  mb-3 mt-5" style="margin-top:30px; margin-left:20px;">
+      <div class="col p-1 " style="width:20%;">
+        <h6>Email Address</h6>
+        <input type="email" nz-input placeholder="xyz@example.com" [(ngModel)]="value1">
+
+      </div>
+      <div class="col p-1" style="width:20%;">
+        <h6>Full Name (optional)</h6>
+        <input nz-input placeholder="Basic usage" [(ngModel)]="value">
+
+
+      </div> <br>
+
+
+    </div>
+    <div class="d-flex justify-content-end mt-5">
+      <div class="p-2 ">
+        <button type="button" class="btn btn-success pull-right" (click)="submit();"> <b>Send Invitations</b></button>
+
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

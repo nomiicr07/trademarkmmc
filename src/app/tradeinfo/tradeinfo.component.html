@@ -1,0 +1,287 @@
+<div class='container'>
+  <div *ngFor="let employee of employees">
+
+<div class="bg-dark">
+  <h3 style="color:white;">General
+    <button class="pull-right btn btn-primary btn-sm" (click)="employee.isEditable=!employee.isEditable" *ngIf="!employee.isEditable">Edit</button>
+    <button  class="pull-right btn btn-success  btn-sm" *ngIf="employee.isEditable" (click)="employee.isEditable=!employee.isEditable">Save</button>   
+     </h3>
+  
+</div>
+
+
+
+  <!-- <div class="row">
+    <div class="col-sm-4"> -->
+      <!-- <input type="text" class="form-control" placeholder="ID"> -->
+      <!-- <label>ID : </label>  <p>noman</p>
+    </div>
+    <div class="col-sm-4"> -->
+      <!-- <input type="text" class="form-control" placeholder="TYPE"> -->
+      <!-- <label for="">Type :</label>  -->
+
+    <!-- </div>
+    <div class="col-sm-4"> -->
+      <!-- <input type="text" class="form-control" placeholder="SUBTYPE"> -->
+      <!-- <label for="">Sub Type :</label> 
+
+    </div>
+  </div> -->
+
+
+
+  <div class="row"  >
+      <div class="col-md-4"    >
+       <label  > ID : </label>
+       <input type="text" [(ngModel)]="employee.ID" [disabled]="!employee.isEditable"/>    
+       </div>
+      <div class="col-md-4" >
+          <label > Type:</label>
+          <input type="text" [(ngModel)]="employee.Type" [disabled]="!employee.isEditable"/>    
+          <!-- <button (click)="employee.isEditable=!employee.isEditable" *ngIf="!employee.isEditable">Edit</button>
+          <button *ngIf="employee.isEditable" (click)="employee.isEditable=!employee.isEditable">Save</button>   
+           -->
+
+      </div>
+      <div class="col-md-4">
+          <label> Sub Type :</label>
+          <input type="text" [(ngModel)]="employee.Subtype" [disabled]="!employee.isEditable"/>    
+  
+
+      </div>
+    </div>
+  
+
+
+<hr>
+<!-- <div class="form-row">
+    <div class="col-4">
+      <input type="text" class="form-control" placeholder="Sign">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Status">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Sub-Status">
+    </div>
+</div> -->
+<div class="row" >
+    <div class="col-md-4"   >
+     <label> Sign : </label>
+     <input type="text" [(ngModel)]="employee.Sign" [disabled]="!employee.isEditable"/>    
+
+     
+    </div>
+    <div class="col-md-4" >
+        <label > Status:</label>
+        <input type="text" [(ngModel)]="employee.Status" [disabled]="!employee.isEditable"/>    
+
+    </div>
+    <div class="col-md-4">
+        <label > Sub Status :</label>
+        <input type="text" [(ngModel)]="employee.Substatus" [disabled]="!employee.isEditable"/>    
+
+    </div>
+  </div>
+
+
+<hr>
+<div class="mt-2">
+   <!-- <input type="text" class="form-control" placeholder="Trademark"> -->
+   <label > Trademark :</label>
+   <input type="text" class="w-75 pl-3" [(ngModel)]="employee.Trademark" [disabled]="!employee.isEditable"/>    
+
+
+</div>
+<hr>
+
+
+<div >
+    <!-- <input type="text" class="form-control" placeholder="Country"> -->
+    <label > Country :</label>
+    <input type="text" class="w-75 pl-3" [(ngModel)]="employee.Country" [disabled]="!employee.isEditable"/>    
+
+</div>
+<hr>
+
+
+<!-- <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Classes">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Niche Class">
+    </div>
+            <input type="text" [(ngModel)]="employee.Subtype" [disabled]="!employee.isEditable"/>    
+
+</div> -->
+
+<div class="row" >
+    <div class="col-md-6"   >
+     <label> Classes : </label>
+     <input type="text" [(ngModel)]="employee.Classes" [disabled]="!employee.isEditable"/>    
+
+    </div>
+    <div class="col-md-6" >
+        <label > Niche Class :</label>
+        <input type="text" [(ngModel)]="employee.Niche" [disabled]="!employee.isEditable"/>    
+
+    </div>
+    
+  </div>
+
+
+<hr>
+<!-- <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Color Claimed">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Family">
+    </div>
+  
+</div> -->
+
+
+
+
+
+
+
+<div class="row" >
+    <div class="col-md-6"   >
+     <label> Color Claimed : </label>
+     <input type="text" [(ngModel)]="employee.colorClaimed" [disabled]="!employee.isEditable"/>    
+
+    </div>
+    <div class="col-md-6" >
+        <label > Family :</label>
+        <input type="text" [(ngModel)]="employee.family" [disabled]="!employee.isEditable"/>    
+
+    </div>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+
+<!-- <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Filling Language">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Working Language(if * filling)">
+    </div>
+  
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<div class="row" >
+    <div class="col-md-6"   >
+     <label>Filling Language : </label>
+     <input type="text" [(ngModel)]="employee.fillingLanguage" [disabled]="!employee.isEditable"/>    
+
+    </div>
+    <div class="col-md-6" >
+        <label > Working Language(if * filling) :</label>
+        <input type="text" [(ngModel)]="employee.WorkingLanguage" [disabled]="!employee.isEditable"/>    
+
+    </div>
+    
+  </div>
+<hr>
+
+
+
+
+<div >
+    <!-- <input type="text" class="form-control" placeholder="Desclaimer"> -->
+    <label > Desclaimer :</label>
+
+    <input type="text" [(ngModel)]="employee.Desclaimer" [disabled]="!employee.isEditable"/>    
+
+</div>
+<hr>
+
+<div >
+    <!-- <input type="text" class="form-control" placeholder="Limitations"> -->
+    <label > Limitations :</label>
+
+    <input type="text" [(ngModel)]="employee.limitation" [disabled]="!employee.isEditable"/>    
+
+</div>
+<hr>
+
+</div>
+
+
+
+<div class="bg-dark">
+    <h3 style="color:white;">Dates</h3>
+  </div>
+
+
+
+  <div class="form-row">
+      <div class="col-4">
+        <input type="text" class="form-control" placeholder="Filling Date">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Filling No">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Filling Publication">
+      </div>
+    </div>
+  
+    <hr>
+
+    <div class="form-row">
+        <div class="col-4">
+          <input type="text" class="form-control" placeholder="Registration Date">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Registration No">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Publication of the Registration">
+        </div>
+      </div>
+    
+      <hr>
+  
+      <div class="form-row">
+          <div class="col-4">
+            <input type="text" class="form-control" placeholder=" Renewed">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Next Renewal Date">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Grace Period deadline">
+          </div>
+        </div>
+      
+        <hr>
+    
+  
+
+</div>

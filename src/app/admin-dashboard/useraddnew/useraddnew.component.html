@@ -1,0 +1,175 @@
+<div class="container ">
+
+
+<h4>Trademark Type :</h4>
+
+<nz-select style="width: 60%; " class="pl-2" nzShowSearch nzAllowClear nzPlaceHolder="Select Trademark Type" [(ngModel)]="selectedValue" (ngModelChange)="log($event)">
+    <nz-option nzLabel="Word" nzValue="option">word</nz-option><br>
+    <nz-option nzLabel="Logo" nzValue="logo"></nz-option><br>
+    <nz-option nzLabel="Word and Logo" nzValue="wl"></nz-option><br>
+  </nz-select> <br>
+<div *ngIf="work" class="container"> 
+  
+  <h6>Select Your Word :</h6>
+ <input nzInput placeholder="Select your Word"> <br>
+ <h6>Please Select your Class :</h6>
+
+ <nz-select style="width: 60%" [(ngModel)]="tagValues" [nzSize]="size" nzMode="tags" nzPlaceHolder="Please Select Your company">
+  <nz-option *ngFor="let trade of list" [nzLabel]="trade.Trademark" [nzValue]="trade.value"></nz-option>
+</nz-select>
+  <br>
+  <h6>Company Name :</h6>
+  <nz-select style="width: 60%" [(ngModel)]="tagValue" [nzSize]="size" nzMode="tags" nzPlaceHolder="Please Select Your company">
+      <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+    </nz-select>
+
+
+<br>
+<h5>Series of Mark</h5>
+<nz-select style="width: 60%" [(ngModel)]="tagValue" [nzSize]="size" nzMode="tags" nzPlaceHolder="Please Select Your company">
+  <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+</nz-select> 
+ <br>
+ <h5> Using in </h5>
+
+<nz-select style="width: 60%; "  nzShowSearch nzAllowClear nzPlaceHolder="using" [(ngModel)]="selectedValue" (ngModelChange)="use($event)">
+    <nz-option nzLabel="yes" nzValue="yes"></nz-option><br>
+    <nz-option nzLabel="no" nzValue="no"></nz-option><br>
+  </nz-select>
+<div *ngIf="using">
+  <nz-date-picker [nzFormat]="dateFormat"></nz-date-picker>
+
+</div>
+
+</div>
+<div *ngIf="works">
+
+
+  <h6>Please Select your Class :</h6>
+
+  <nz-select style="width: 60%; "  nzShowSearch nzAllowClear nzPlaceHolder="Select class" [(ngModel)]="selectedValue" (ngModelChange)="log($event)">
+    <nz-option nzLabel="classes" nzValue="1">word</nz-option>
+  
+  </nz-select> 
+  <br>
+  <h6>Company Name :</h6>
+  <nz-select style="width: 60%" [(ngModel)]="tagValue" [nzSize]="size" nzMode="tags" nzPlaceHolder="Please Select Your company">
+      <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+    </nz-select>
+
+
+<br>
+<h6>Series of Mark</h6>
+<nz-select style="width: 60%" [(ngModel)]="tagValue" [nzSize]="size" nzMode="tags" nzPlaceHolder="Please Select Your Mark">
+  <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+</nz-select> 
+ <br>
+ <h6> Using in </h6>
+
+<nz-select style="width: 60%; "  nzShowSearch nzAllowClear nzPlaceHolder="using" [(ngModel)]="selectedValue" (ngModelChange)="use($event)">
+    <nz-option nzLabel="yes" nzValue="yes"></nz-option><br>
+    <nz-option nzLabel="no" nzValue="no"></nz-option><br>
+  </nz-select>
+<div *ngIf="using">
+  <nz-date-picker [nzFormat]="dateFormat"></nz-date-picker>
+
+</div>
+
+<h6>Upload Logo</h6>
+
+<div class="clearfix">
+  <nz-upload
+    nzAction="https://jsonplaceholder.typicode.com/posts/"
+    nzListType="picture-card"
+    [(nzFileList)]="fileList"
+    [nzShowButton]="fileList.length < 3"
+    [nzPreview]="handlePreview">
+      <i nz-icon type="plus"></i>
+      <div class="ant-upload-text">Upload</div>
+  </nz-upload>
+  <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible=false">
+    <ng-template #modalContent>
+      <img [src]="previewImage" [ngStyle]="{ 'width': '100%' }" />
+    </ng-template>
+  </nz-modal>
+</div> 
+  
+</div>
+
+<div *ngIf="workss"> 
+  <h6>Select Your Word :</h6>
+  <input nzInput placeholder="Select your Word"> <br>
+
+
+  <h6>Please Select your Class :</h6>
+
+  <nz-select style="width: 60%; "  nzShowSearch nzAllowClear nzPlaceHolder="Select class" [(ngModel)]="selectedValue" (ngModelChange)="log($event)">
+    <nz-option nzLabel="classes" nzValue="1">word</nz-option>
+  
+  </nz-select> 
+  <br>
+  <h6>Company Name :</h6>
+  <nz-select style="width: 60%" [(ngModel)]="tagValue" [nzSize]="size" nzMode="tags" nzPlaceHolder="Please Select Your company">
+      <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+    </nz-select>
+
+
+<br>
+<h6>Series of Mark</h6>
+<nz-select style="width: 60%" [(ngModel)]="tagValue" [nzSize]="size" nzMode="tags" nzPlaceHolder="Please Select Your Mark">
+  <nz-option *ngFor="let option of listOfOption" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+</nz-select> 
+ <br>
+ <h6> Using in </h6>
+
+<nz-select style="width: 60%; "  nzShowSearch nzAllowClear nzPlaceHolder="using" [(ngModel)]="selectedValue" (ngModelChange)="use($event)">
+    <nz-option nzLabel="yes" nzValue="yes"></nz-option><br>
+    <nz-option nzLabel="no" nzValue="no"></nz-option><br>
+  </nz-select>
+<div *ngIf="using">
+  <nz-date-picker [nzFormat]="dateFormat"></nz-date-picker>
+
+</div>
+
+<h6>Upload Logo</h6>
+
+<div class="clearfix">
+  <nz-upload
+    nzAction="https://jsonplaceholder.typicode.com/posts/"
+    nzListType="picture-card"
+    [(nzFileList)]="fileList"
+    [nzShowButton]="fileList.length < 3"
+    [nzPreview]="handlePreview">
+      <i nz-icon type="plus"></i>
+      <div class="ant-upload-text">Upload</div>
+  </nz-upload>
+  <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible=false">
+    <ng-template #modalContent>
+      <img [src]="previewImage" [ngStyle]="{ 'width': '100%' }" />
+    </ng-template>
+  </nz-modal>
+</div> 
+
+
+
+
+
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>

@@ -1,0 +1,47 @@
+<div class="container">
+
+
+
+<div  class="row justify-content-around" >
+
+ <div class="col-3  ">
+   <div class=" col1 bg-dark">
+   <h4 style="text-align:center; color:white; ">WORD ONLY</h4>
+   <label for=""><b>TOTAL </b></label> :{{list[0].Price}}
+ </div>
+ <br>
+ <div class="round" >
+    <input type="checkbox"  id="checkbox1" [(ngModel)]="checkbox1" (click)="change1()"  />
+    <label for="checkbox1"></label>
+  </div>
+ </div>
+
+ <div class="col-3 ">
+<div class="col2 bg-dark">
+  <h4 style="text-align:center; color:white;">
+    LOGO ONLY
+  </h4>
+  <label ><b >TOTAL  </b ></label> :{{list[1].Price}}
+ </div>
+ <br>
+ <div class="round justify-content-center">
+    <input type="checkbox" id="checkbox2" [(ngModel)]="checkbox2" (click)="change2()" />
+    <label for="checkbox2"></label>
+  </div>
+</div>
+
+ <div class="col-3 ">
+   <div class="col3 bg-dark">
+   <h4 style="text-align:center; color:white;"> BOTH</h4>
+   <label for=""><b>TOTAL</b></label> : {{list[2].Price}}
+
+ </div>
+ <br>
+ <div class="round">
+    <input type="checkbox" id="checkbox3" [(ngModel)]="checkbox3" (click)="change3()"/>
+    <label for="checkbox3"></label>
+  </div>
+</div>
+</div>
+
+</div>
